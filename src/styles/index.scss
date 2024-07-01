@@ -25,12 +25,12 @@ body {
         margin-right:1rem;
         font-size: 1.2rem;
         font-weight: bold;
-        position: relative;
+      
 
         &:before {
           content: " ► ";
           margin-right: .5rem;
-          position: absolute;
+         
         }
 
         &:hover {
@@ -164,9 +164,20 @@ body {
       &::placeholder{
                color:rgb(125, 119, 119);
         }
+
+        &--small{
+         
+        animation: reduceWidth 2s forwards;
+
+          &::placeholder{
+                   color:transparent;
+            }
      }
-    
-    }
+ }
+
+ 
+
+}
 
      &-btn{
       display: flex;
@@ -261,7 +272,7 @@ body {
       font-weight: bold;
       margin-right: 20px;
       &:before{
-        content: "\02C3";
+        content: " ► ";
         margin-right:10px;
       }
 
@@ -344,7 +355,6 @@ ul.react-multi-carousel-dot-list {
 }
 
 
-
 .exhibition-btn{
   display: flex;
   margin: auto;
@@ -393,27 +403,28 @@ ul.react-multi-carousel-dot-list {
   }
 
   &-links{
-    display: flex;
     text-align: center;
     margin-top: 10px;
     font-size: 24px;
     text-align: left;
-    padding-right: 85px;
     margin-bottom: 100px;
     font-weight: bold;
     text-decoration: underline;
     letter-spacing: -0.02em;
+    
 
    &:hover{
     text-decoration: none;
     cursor: pointer;
+   
    }
-
+   
    &:before{
     content:" ► ";
     color:red;
-    text-decoration: none;
    }
+
+  
   }
 
   &-btn{
@@ -476,34 +487,36 @@ ul.react-multi-carousel-dot-list {
   grid-template-columns: 1fr 1fr;
   margin-top:70px;
   margin-left:24%;
-
+  
   &-block{
-    width:500px;
-    height:700px;
-    &:hover{
-      filter:contrast(60%);
-      cursor: pointer;
+    width:525px;
+    // height:700px;
+    &:hover {
+      img{
+        filter:contrast(60%);
+        cursor: pointer;
+      }
+     
     }
   }
 
   &-header{
-    display: flex;
-    margin-top:5px;
-    display: flex;
-    height:10%;
-    font-size: 60px;
-    margin-bottom: 70px;
+    margin-top:2px;
+  
+    font-size: 55px;
+    margin-bottom: 10px;
+    margin-left:1px;
     &:before{
       content:" ► ";
       color:red;
       text-decoration: none;
-     
+      margin-left:2px;
      }
    
   }
 
   &-artsection{
-    width: 460px;
+    width: 490px;
     height: 480px;
     padding:10px
   }
@@ -687,5 +700,15 @@ ul.react-multi-carousel-dot-list {
   
   &:hover{
   text-decoration: none;
+  }
+}
+
+
+@keyframes reduceWidth {
+  from {
+   width:100%;
+  }
+  to{
+   width:0%;
   }
 }

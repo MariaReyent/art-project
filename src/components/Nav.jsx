@@ -37,7 +37,9 @@ function Nav() {
         <input
           type="text"
           className={`navigation__search-input ${
-            isExpanded ? "navigation__search-input--large" : ""
+            isExpanded
+              ? "navigation__search-input--large"
+              : "navigation__search-input--small"
           }`}
           placeholder="Search"
         ></input>

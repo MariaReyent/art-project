@@ -13,13 +13,11 @@ import ev2 from "../images/ev2.jpg";
 import ev3 from "../images/ev3.jpg";
 import mfa from "../images/mfa.jpg";
 
-import s1 from "../images/s1.jpg";
-import s2 from "../images/s2.jpg";
-import s3 from "../images/s3.jpg";
-import s4 from "../images/s4.jpg";
+import CustomRightArrow from "./CustomRightArrow";
+import CustomLeftArrow from "./CustomLeftArrow";
 
 function Main() {
-  const [clicked, setClicked] = useState(false);
+  const [clicked, setClicked] = useState(true);
 
   const handleButtonClick = () => {
     setClicked((prevState) => !prevState);
@@ -62,7 +60,7 @@ function Main() {
       <section className="lines">
         <div className="lines__top-line">Hallyu!The Korean Wave</div>
         <div className="lines__moving">
-          <Marquee autoFill pauseOnClick={clicked}>
+          <Marquee autoFill play={clicked}>
             <p className="lines__moving-words">Now open</p>
             <p className="lines__moving-words">Plan your visit</p>
           </Marquee>
@@ -79,6 +77,8 @@ function Main() {
           showDots={true}
           infinite={true}
           centerMode={true}
+          customRightArrow={<CustomRightArrow />}
+          customLeftArrow={<CustomLeftArrow />}
         >
           {slideImages.map((slideImage, index) => (
             <div key={index} className="slide__container">
