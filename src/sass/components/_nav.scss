@@ -1,0 +1,134 @@
+.navigation {
+    position: relative; 
+    margin-top: 9rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid;
+ 
+   &__links {
+      display: flex;
+      margin-left: 15.7rem;
+      display: flex;
+     
+      
+      &-list{
+        color: black;
+        text-decoration: none;
+        padding: 15px 25px 15px 0px;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 1.125rem;
+        &:hover{
+         text-decoration:underline;
+        }
+  }
+ }
+ 
+   &__search{
+      position: relative;
+      margin-left: auto;
+      display: flex;
+      width: 180px;
+      padding-left: 202px;
+      justify-content: flex-end;
+ 
+     &-input {
+       display: flex;
+       border: .5px solid transparent ; 
+       overflow:hidden;
+       height:1.7rem;
+       width: 5%;
+       align-items: center;
+       justify-content: center;
+       padding-right:60px;
+       transition: width, outline,box-shadow, 0.5s ease-in-out;
+       
+      &::placeholder{
+       color: transparent;
+      }
+   
+      &--large{
+       width:100%;
+       outline: 1px solid;
+       box-shadow:0 0 0 5px rgb(197, 210, 248);
+       &::placeholder{
+                color:rgb(125, 119, 119);
+         }
+ 
+         &--small{
+          
+         animation: reduceWidth 2s forwards;
+ 
+           &::placeholder{
+                    color:transparent;
+             }
+      }
+  }
+ 
+  
+ 
+ }
+ 
+      &-btn{
+       display: flex;
+       z-index: 0;
+       width: 24px;
+       height: 24px;
+       position: absolute;
+       right:4px; 
+       align-items:center;
+       justify-content:center;
+       padding: 4px 2px;
+       z-index: 100;
+       border:none;
+       background-color:transparent;
+       
+ }
+  &-icon{
+   display: flex;
+   position: absolute;
+   right: 5px; 
+   align-items: center;
+   z-index:22;
+   justify-content: center;
+   align-items:center;
+   width: 24px;
+   height: 24px;
+   padding:4px 2px;
+ }
+ }
+ 
+ 
+ 
+   &__schedule {
+     display: flex;
+     position: relative;
+     margin-left: auto;
+     padding-right: 21.25rem;
+     z-index: 22;
+     
+     &-label{
+       font-family: sans-serif;
+       font-size: 1rem;
+       font-weight:bold;
+       padding: 0px  7.475px 0px 0px;
+     }
+     &-time{
+       font-family: sans-serif;
+       font-size: 1rem;
+     }
+   }
+  
+ }
+ 
+ @keyframes reduceWidth {
+  from {
+   width:100%;
+  }
+  to{
+   width:0%;
+  }
+}

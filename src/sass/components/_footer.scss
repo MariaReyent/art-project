@@ -1,0 +1,141 @@
+.footer{
+ 
+    margin-top: 3rem;
+    background-color: #EDEEEE;
+    border-top:#000 1px solid;
+    flex-wrap: wrap;
+ 
+
+    &__link-header{
+       width:300px;
+    }
+    
+    &__paragr{
+      width: 250px;
+  
+      &-2{
+        width:230px;
+      }
+    }
+  
+    &__link-btn1 {
+      display: flex;
+      justify-content: center;
+      margin-top:10px;
+      font-size: 1rem;
+      background-color: transparent;
+      border: 1px solid #000;
+      font-weight: 600;
+      line-height: 1.38889;
+      padding: 9px 10px;
+      width:150px;
+      &:hover{
+        background-color:black;
+        color:white;
+      }
+  }
+  
+  
+    &__link-1{
+      text-decoration:underline;
+      display: block;
+      color:black;
+      font-size: 16px;
+      width: 200px;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    &__link-3{
+      padding-top: 50px;
+      padding-bottom:20px;
+      text-decoration:underline;
+      color:black;
+      display: inline-block;
+      font-size: 16px;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  
+    &__socials{
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      margin-left:30px;
+   
+      &-icons{
+        width:35px;
+        margin:4px;
+        border:1px solid;
+        padding:5px;
+      }
+    }
+    
+    &__email{
+      height:35px;
+      width:230px;
+      outline:1px solid;
+      border:none;
+      margin-top:2px;
+      &:focus{
+        box-shadow:0 0 0 5px rgb(197, 210, 248); 
+        outline:none;
+        border:1px solid  rgb(75, 122, 241);
+       
+       
+      }
+      &-label{
+        position: relative; 
+        &:after{
+          content:"\204E";
+          color:red;
+          width: 50px;
+          position: absolute;
+          top:-40%;
+       }
+      }
+    
+   }
+  
+   &__list{
+    width:300px;
+    
+    &-item, li{
+      list-style-type: none;
+      padding:6px;
+      font-size: 17px;
+      text-decoration: underline;
+  
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  
+    &-trademark{
+     padding-left:50px;
+     width:200px;
+     font-size: 17px;
+    }
+   }
+   
+   
+  }
+  .footer__socials,a {
+    text-decoration: none; 
+    color: inherit;        
+  }
+  
+  
+  .footer__paragr-2 a {
+    text-decoration: underline; 
+    color: inherit;  
+  
+    
+    &:hover{
+    text-decoration: none;
+    }
+  }
+  
+  
+ 
